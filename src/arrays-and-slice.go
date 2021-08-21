@@ -11,4 +11,18 @@ func main() {
 
 	fmt.Println(ages, len(ages))
 	fmt.Println(players, len(players))
+
+	//slices
+	var scores = []int{3, 5, 9}
+	scores = append(scores, 23)
+
+	fmt.Println(scores, len(scores))
+
+	// ranges
+	range_one := players[1:3] // [m'bape Neymar]
+	range_two := players[2:] //[m'bape Neymar]
+	range_three := players[:3] //[Messi Cristiano m'bape]
+
+	fmt.Println(range_one, range_two, range_three)
+
 }
