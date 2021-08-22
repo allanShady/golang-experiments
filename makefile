@@ -6,3 +6,6 @@ run_numbers:
 
 run_printing_formatt:
 	go run ./src/variables/printing-and-formatt-string.go
+
+run_arrays:
+	go run ./src/arrays-and-slice.go
