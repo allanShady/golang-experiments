@@ -9,3 +9,6 @@ run_printing_formatt:
 
 run_arrays:
 	go run ./src/arrays-and-slice.go
+
+run_standard_lib:
+	go run ./src/standard-library.go
