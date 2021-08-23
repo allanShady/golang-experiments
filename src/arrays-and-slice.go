@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 
@@ -19,10 +22,22 @@ func main() {
 	fmt.Println(scores, len(scores))
 
 	// ranges
-	range_one := players[1:3] // [m'bape Neymar]
-	range_two := players[2:] //[m'bape Neymar]
+	range_one := players[1:3]  // [m'bape Neymar]
+	range_two := players[2:]   //[m'bape Neymar]
 	range_three := players[:3] //[Messi Cristiano m'bape]
 
 	fmt.Println(range_one, range_two, range_three)
+
+	// sort package usage
+	numbers := []int{4, 1, 30, 0, 90}
+	sort.Ints(numbers)
+	fmt.Println(numbers)
+
+	zero_index := sort.SearchInts(numbers, 0)
+	fmt.Println(zero_index)
+
+	names := []string{"Salman", "Camilo", "Kelvin", "MJ"}
+	sort.Strings(names)
+	fmt.Println(names)
 
 }
