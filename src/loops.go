@@ -14,4 +14,9 @@ func main() {
 	for position, player := range players {
 		fmt.Printf("The player %v is %s \n", position+1, player)
 	}
+
+	//ignore the unwanted value in the range
+	for _, player := range players {
+		fmt.Printf("The player is %s \n", player)
+	}
 }
