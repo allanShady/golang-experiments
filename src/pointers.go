@@ -11,8 +11,14 @@ func Greeting(name string) {
 	fmt.Println(*name_pointer)
 }
 
+func UpdateName(name *string) {
+	*name = "John Doe"
+}
+
 func main() {
 	name := "Allan Camilo"
 
 	Greeting(name)
+	UpdateName(&name)
+	fmt.Println("Now the name is not 'Allan Camilo' anymore and it is: ", name)
 }
