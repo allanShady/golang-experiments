@@ -12,3 +12,6 @@ run_arrays:
 
 run_standard_lib:
 	go run ./src/standard-library.go
+
+run_sample_app:
+	go run ./src/sample-app/main.go ./src/sample-app/bill.go
