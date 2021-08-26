@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	sample_bill := FactoryBill("Allan's bill")
-	fmt.Println(sample_bill.FormatOutput())
+	bill := FactoryBill("Allan's bill")
+
+	bill.AddItem("coffee puding", 7.321)
+
+	bill.UpdateTip(40)
+	fmt.Println(bill.FormatOutput())
 }
