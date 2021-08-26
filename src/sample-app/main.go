@@ -25,8 +25,15 @@ func CreateBill() Bill {
 	return bill
 }
 
+func PromptOptions(bill Bill) {
+	reader := bufio.NewReader(os.Stdin)
+
+	options, _ := GetInput("Choose an option (a - add item, s - save item, t - add tip): ", reader)
+	fmt.Println(options)
+
+}
+
 func main() {
 	bill := CreateBill()
-
-	fmt.Println(bill)
+	PromptOptions(bill)
 }
