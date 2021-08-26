@@ -11,7 +11,7 @@ type Bill struct {
 func FactoryBill(name string) Bill {
 	return Bill{
 		name:  name,
-		items: map[string]float64{"coffee": 5.087, "xima": 21.879},
+		items: map[string]float64{},
 		tip:   0,
 	}
 }
