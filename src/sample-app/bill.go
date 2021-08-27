@@ -11,12 +11,12 @@ type Bill struct {
 func FactoryBill(name string) Bill {
 	return Bill{
 		name:  name,
-		items: map[string]float64{"coffee": 5.087, "xima": 21.879},
+		items: map[string]float64{},
 		tip:   0,
 	}
 }
 
-func (bill Bill) FormatOutput() string {
+func (bill *Bill) FormatOutput() string {
 	output := "Bills break down: \n"
 	var total_bills float64 = 0
 
@@ -25,7 +25,19 @@ func (bill Bill) FormatOutput() string {
 		total_bills += value
 	}
 
-	output += fmt.Sprintf("%-25v ...$%0.2f\n", "total:", total_bills)
+	output += fmt.Sprintf("%-25v ...$%v\n", "tip:", bill.tip)
+
+	output += fmt.Sprintf("%-25v ...$%0.2f\n", "total:", total_bills+bill.tip)
 
 	return output
+}
+
+// update tip
+func (bill *Bill) UpdateTip(tip float64) {
+	bill.tip = tip
+}
+
+// add item
+func (bill *Bill) AddItem(name string, price float64) {
+	bill.items[name] = price
 }
