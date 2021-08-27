@@ -61,6 +61,7 @@ func PromptOptions(bill Bill) {
 		PromptOptions(bill)
 		fmt.Println(tip)
 	case "s":
+		bill.Save()
 		fmt.Println("The following bill was successful saved ", bill)
 	default:
 		fmt.Println("Oops! invlaid chosen option. Please try again.")
